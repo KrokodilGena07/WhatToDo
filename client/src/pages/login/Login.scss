@@ -1,0 +1,51 @@
+@use '../../styles/App';
+
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    @include App.form;
+}
+
+.LoginFormBtn {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.LoginFormLink {
+    @include App.centerBox(100%);
+    @include App.secondaryText;
+    margin-bottom: 5px;
+}
+
+.LoginFormLinkText {
+    text-decoration: none;
+    @include App.secondaryText;
+    margin-left: 2px;
+    font-size: small;
+    font-weight: 600;
+
+    &:hover {
+        color: App.$secondary-hover-color;
+    }
+}
+
+.LoginFormErr {
+    margin-top: 5px;
+    color: red;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes showing {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.loginEnter {
+    animation: showing 400ms;
+}

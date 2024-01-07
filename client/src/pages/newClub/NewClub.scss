@@ -1,0 +1,20 @@
+@use '../../styles/App';
+
+.ClubForm {
+    @include App.form;
+}
+
+.ClubFormContent {
+    @include App.betweenBox;
+    gap: 20px;
+}
+
+.ClubFormColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.ClubFormBtn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+@use '../../../styles/App';
+
+.Dropdown {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+}
+
+.DropdownHead {
+    bottom: 0;
+    padding: 7px 13px;
+    border-radius: 8px;
+    color: white;
+    background-color: App.$primary-color;
+    @include App.alignBox;
+}
+
+.DropdownIcon {
+    margin-left: 10px;
+}
+
+.DropdownList {
+    border-radius: 8px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 3px;
+    background-color: white;
+    list-style: none;
+    margin-top: 3px;
+}
+
+@mixin dropdownItem {
+    padding: 4px 6px;
+    border-radius: 8px;
+    word-break: break-word;
+}
+
+.DropdownItem {
+    @include dropdownItem;
+
+    &:hover {
+        background-color: rgb(0, 0, 0, 0.1);
+    }
+}
+
+.DropdownSelectedItem {
+    color: App.$primary-color;
+    background-color: #ee552230;
+    @include dropdownItem;
+}

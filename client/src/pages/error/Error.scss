@@ -1,0 +1,21 @@
+@use '../../styles/App';
+
+.ErrorPageContent {
+    grid-area: content;
+    @include App.centerBox(92vh);
+    flex-direction: column;
+}
+
+.ErrorPageHeadText {
+    @include App.primaryText;
+    font-size: xxx-large;
+}
+
+.ErrorPageText {
+    @include App.secondaryText;
+    margin-top: 10px;
+}
+
+.ErrorPageBtn {
+    margin-top: 20px;
+}

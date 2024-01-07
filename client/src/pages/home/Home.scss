@@ -1,0 +1,28 @@
+@use '../../styles/App';
+
+.HomePageContent {
+    grid-area: content;
+    margin-top: 40px;
+}
+
+.HomePageFirstText {
+    max-width: 700px;
+}
+
+.HomePageHeadText {
+    @include App.primaryText;
+    font-size: xxx-large;
+}
+
+.HomePageText {
+    @include App.secondaryText;
+    margin-top: 20px;
+}
+
+.HomePageButtons {
+    margin-top: 20px;
+}
+
+.HomePageBtn {
+    margin-left: 10px;
+}

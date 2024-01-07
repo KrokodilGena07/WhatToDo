@@ -1,0 +1,93 @@
+@use '../../styles/App';
+
+.ClubsPageContent {
+    grid-area: content;
+    min-height: 92vh;
+}
+
+.ClubVoidList {
+    @include App.primaryText;
+    @include App.centerBox(calc(100% - 53.6px));
+}
+
+.ClubList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.ClubItem {
+    padding: 15px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    gap: 10px;
+    @include App.columnBetweenBox;
+}
+
+.ClubItemHead {
+    @include App.alignBox;
+    gap: 10px;
+}
+
+.ClubItemImage {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+}
+
+.ClubItemTitle {
+    @include App.primaryText;
+}
+
+.ClubItemDescription {
+    @include App.secondaryText;
+    margin-top: 10px;
+}
+
+.ClubItemLink {
+    margin-left: 10px;
+}
+
+.ClubFilter {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    @include App.betweenBox;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ClubFilterMenu {
+    @include App.alignBox;
+    gap: 15px;
+}
+
+.ClubsPageErr {
+    @include App.centerBox(100%);
+    @include App.primaryText;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ClubModal {
+    @include App.columnBetweenBox;
+    height: 100%;
+}
+
+.ClubModalHead {
+    @include App.betweenBox;
+    @include App.primaryText;
+}
+
+.ClubModalBody {
+    @include App.betweenBox;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.ClubModalBtn {
+    margin-left: 10px;
+}

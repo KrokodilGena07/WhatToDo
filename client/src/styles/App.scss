@@ -1,0 +1,85 @@
+$primary-color: #EE5622;
+$secondary-color: #a8adb0;
+$primary-hover-color: #f44309;
+$secondary-hover-color: #858d93;
+$selection-color: #fd7548;
+
+.Page {
+    display: grid;
+    grid-template-columns: 15vw 1fr 15vw;
+    grid-template-rows: 8vh 1fr;
+
+    grid-template-areas:
+    'header header header'
+    '. content .';
+}
+
+@mixin betweenBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin columnBetweenBox {
+    @include betweenBox;
+    flex-direction: column;
+}
+
+@mixin alignBox {
+    display: flex;
+    align-items: center;
+}
+
+@mixin centerBox($height) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height;
+}
+
+@mixin primaryText {
+    color: $primary-color;
+    font-family: 'Rubik', sans-serif;
+}
+
+@mixin secondaryText {
+    color: $secondary-color;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+@mixin secondaryTextBold {
+    color: $secondary-color;
+    font-family: 'Dosis', sans-serif;
+}
+
+@mixin form {
+    border-radius: 8px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+}
+
+.PageFreeze {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.FormPageContent {
+    grid-area: content;
+    @include centerBox(92vh);
+}
+
+.FormItem {
+    margin-bottom: 5px;
+}
+
+.FormLabel {
+    @include secondaryTextBold;
+    color: $primary-color;
+    font-size: large;
+    margin-bottom: 2px;
+}
+
+.FormInputErr {
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+}

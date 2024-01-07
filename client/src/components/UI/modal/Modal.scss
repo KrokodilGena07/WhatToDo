@@ -1,0 +1,17 @@
+@use '../../../styles/App';
+
+.ModalContainer {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    @include App.centerBox(100%);
+}
+
+.Modal {
+    padding: 10px;
+    background-color: white;
+    width: 450px;
+    height: 300px;
+    border-radius: 8px;
+}

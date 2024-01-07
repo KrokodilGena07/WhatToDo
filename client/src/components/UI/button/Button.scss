@@ -1,0 +1,75 @@
+@use '../../../styles/App';
+
+@mixin btn {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+        background-color: #d4d4d4;
+        cursor: default;
+    }
+}
+
+.primary-btn {
+    @include btn;
+    background-color: App.$primary-color;
+
+    &:hover {
+        background-color: App.$primary-hover-color;
+    }
+}
+
+.secondary-btn {
+    @include btn;
+    background-color: App.$secondary-color;
+
+    &:hover {
+        background-color: App.$secondary-hover-color;
+    }
+}
+
+.outline-btn {
+    @include btn;
+    background-color: white;
+    color: App.$primary-color;
+    outline: 1px solid App.$primary-color;
+
+    &:hover {
+        outline: 2px solid App.$primary-color;
+    }
+}
+
+.btn-sm {
+    padding: 5px 11px;
+    font-size: 14px;
+}
+
+.btn-md {
+    padding: 7px 13px;
+    font-size: 16px;
+}
+
+.btn-lg {
+    padding: 9px 15px;
+    font-size: 17px;
+}
+
+.icon-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    border: none;
+    @include App.centerBox(100%);
+
+    &:hover {
+        background-color: #d7d7d7;
+        cursor: pointer;
+    }
+}

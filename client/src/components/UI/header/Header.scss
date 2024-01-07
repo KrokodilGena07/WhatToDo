@@ -1,0 +1,35 @@
+@use '../../../styles/App';
+
+.Header {
+    @include App.betweenBox;
+    grid-area: header;
+    padding: 0 15vw;
+}
+
+.HeaderLogo {
+    @include App.alignBox;
+    text-decoration: none;
+}
+
+.HeaderLogoText {
+    @include App.primaryText;
+    margin-left: 10px;
+}
+
+.HeaderMenu {
+    @include App.alignBox;
+}
+
+.HeaderMenuItem {
+    margin-right: 15px;
+    text-decoration: none;
+    @include App.secondaryTextBold;
+
+    &:hover {
+        color: App.$secondary-hover-color;
+    }
+}
+
+.HeaderBtn {
+    margin-right: 10px;
+}

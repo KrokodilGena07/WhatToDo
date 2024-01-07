@@ -1,0 +1,77 @@
+@use '../../styles/App';
+
+.ClubPageContainer {
+    grid-area: content;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+    min-height: 90vh;
+    margin-top: 2vh;
+    padding: 20px;
+}
+
+.ClubPageContent {
+    @include App.columnBetweenBox;
+    height: 100%;
+}
+
+.ClubPageHead {
+    @include App.betweenBox;
+}
+
+.ClubPageImgContainer {
+    @include App.alignBox;
+}
+
+.ClubPageImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.ClubPageHeadText {
+    @include App.primaryText;
+}
+
+.ClubPageText {
+    @include App.secondaryText;
+    margin: 20px 0;
+}
+
+.ClubPageBoldText {
+    @include App.secondaryTextBold;
+    margin-top: 10px;
+}
+
+.ClubPageBtn {
+    margin: 0 10px;
+}
+
+.ClubPageErr {
+    @include App.primaryText;
+    @include App.centerBox(100%);
+    flex-direction: column;
+}
+
+.ClubPageErrBtn,
+.ClubPageButtons {
+    margin-top: 10px;
+}
+
+.FileBox {
+    @include App.centerBox(100%);
+}
+
+.FileInput {
+    border: 2px solid App.$primary-color;
+    @include App.primaryText;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.InputNone {
+    display: none;
+}
